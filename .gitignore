@@ -1,8 +1,10 @@
-production_files/
 media/
 project/local_settings.py
 project/settings.py
 .vscode
+comandos/gunicorn_production.txt
+comandos/nginx-http-production.txt
+comandos/nginx-https-production.txt
 
 
 # Django #
