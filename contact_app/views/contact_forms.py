@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
@@ -18,6 +19,7 @@ def create(request):
       # contact.save()
       contact = form.save(commit=False)
       contact.owner = request.user
+      messages.success(request, 'Contato cadastrado com sucesso')
       contact.save()
       return redirect('contact_app:update', contact_id=contact.id)
 
@@ -45,6 +47,7 @@ def update(request, contact_id):
 
     if form.is_valid():
       contact = form.save()
+      messages.success(request, 'Contato atualizado com sucesso')
       return redirect('contact_app:update', contact_id=contact.id)
 
     context = {
