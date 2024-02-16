@@ -5,6 +5,8 @@ project/settings.py
 comandos/gunicorn_production.txt
 comandos/nginx-http-production.txt
 comandos/nginx-https-production.txt
+static/
+gunicorn-error-log
 
 
 # Django #
